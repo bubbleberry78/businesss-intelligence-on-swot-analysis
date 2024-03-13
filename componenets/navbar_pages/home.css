@@ -1,0 +1,51 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top:80px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 20px; /* Gap between cards */
+}
+
+.first-row, .second-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swot-card {
+  
+  width: 100%; /* Take full width of grid cell */
+  height: 100%; /* Take full height of grid cell */
+  background-color: transparent; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  border-color: white;
+  padding: 100px; /* Padding inside the card */
+  text-align: center; /* Center text horizontally */
+  font-size: 1.0rem; /* Font size */
+  color:black; /* Text color */
+  will-change: transform; /* Hint to the browser that the transform property will change */
+  transition: transform 0.3s ease,filter 0.3s ease;; /* Smooth transition for hover effect */
+}
+.swot-card.active{
+  transform: scale(1.1);
+  font-weight: bold;
+}
+.card-container:hover .card:not(:hover) {
+  filter: blur(3px); /* Blur non-hovered cards when hovering over the card container */
+}
+
+
+.swot-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  transform: scale(1.18); /* Zoom out effect on hover */
+}
+.strengths{
+  font-size: small;
+}
+

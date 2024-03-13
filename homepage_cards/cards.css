@@ -1,0 +1,55 @@
+.swot-card {
+    width: 300px;
+    height: 250px;
+    border: 1px solid #cccc;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 20px;
+    padding-top: 60px;
+  }
+  
+  .swot-card:hover {
+    transform: translate(-50%,-50%);
+  }
+  
+  .letter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+  }
+  
+  .title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0; /* Hide the title initially */
+    transition: opacity 0.3s ease-in;
+  }
+  
+  .description {
+    position: absolute;
+    top: 40px; /* Adjust the spacing as needed */
+    left: 10px;
+    right: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in;
+    opacity: 0;
+  }
+  .swot-card:hover .description {
+    opacity:1;
+  }
+  .swot-card:hover .title {
+    opacity: 1;
+  }
+
+  .swot-card:hover {
+    transform: scale(1.06); /* Scale up the card slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+  }
+  

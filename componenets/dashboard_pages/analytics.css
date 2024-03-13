@@ -1,0 +1,25 @@
+.analytics-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ 
+    
+  }
+  
+  .dropdown {
+    position:relative;
+    width: 200px; /* Adjust the width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Adjust spacing */
+    margin-right: 300px;
+  }
+
+  .chart-container{
+    margin-top: 60px;
+  }
+
+ 
+  

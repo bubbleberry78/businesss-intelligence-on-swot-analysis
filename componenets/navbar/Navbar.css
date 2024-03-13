@@ -1,0 +1,146 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #000000;
+  padding: 30px;
+  padding-top: 60px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  height: 10%;
+  padding-top: 29px;
+  position: fixed;
+  top: 5%; /* Position it at the top of the viewport */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-end; /* Center elements horizontally */
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.navbar.hover {
+  background-color: #c3073f;
+  opacity: pointer;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  will-change: transform;
+  transition: font-size 0.3s, font-weight 0.3s;
+}
+
+a:hover {
+  font-size: 20px; /* Increase font size */
+  font-weight: bold;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  order: 0;
+  justify-content: flex-start;
+  margin-right: 60%;
+}
+
+.nav_link {
+  display: flex;
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.nav_link li {
+  margin-left: 1rem; /* Adjust spacing between navigation items */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertically center items */
+}
+.nav_link li:not(:last-child) {
+  margin-right: 5rem; /* Add margin to all elements except the last one */
+}
+
+.nav_link li a {
+  color: #fff; /* Adjust text color as needed */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.nav_link li a:hover {
+  /* Adjust hover color as needed */
+  font-size: 25px; /* Increase font size */
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 7px;
+  color: black;
+  background-color: white;
+}
+
+.photo {
+  width: 40px; /* Adjust photo size as needed */
+  height: 40px; /* Adjust photo size as needed */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.nav_toggler {
+  display: none; /* Hide toggler by default */
+}
+
+.google-button {
+  width: 220px;
+  cursor: pointer;
+  animation: zoomOut 0.5s ease forwards;
+  /* Set initial scale to 0 */
+  transform: scale(0);
+}
+
+@keyframes zoomOut {
+  /* Scale from 0 to 1 */
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Media query for toggler visibility */
+@media (max-width: 768px) {
+  
+
+  .photo {
+    width: 40px; /* Adjust photo size as needed */
+    height: 40px; /* Adjust photo size as needed */
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+  }
+}
+
+body.blur:not(.dialog-open) {
+  filter: blur(5px);
+  pointer-events: none; /* Disable pointer events on blurred elements */
+}
